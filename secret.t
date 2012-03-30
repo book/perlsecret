@@ -110,6 +110,20 @@ $n =(@got)= "abababab" =~ /a/g;
 is( $n, 4, '=()=' );
 is( "@got", 'a a a a', '=()=' );
 
+# 0rnate double bladed sword
+$got = 1;
+
+<<m=~m>>
+
+# this is not code
+# and should never be run
+$got = 0;
+
+m
+;
+
+ok( $got, '<<=~m>> m ;' );
+
 # amphisbaena
 # TODO <~>
 
