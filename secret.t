@@ -183,6 +183,18 @@ for my $val ( -1, 0, 1, 1.5, -1.5, -0.5 ) {
    is( $got, $val . '', 'x=!' );
 }
 
+
+# Winking fat comma
+sub APPLE  () { 1 }
+sub CHERRY () { 2 }
+sub BANANA () { 3 }
+%got = (
+  APPLE   ,=>  "green",
+  CHERRY  ,=>  "red",
+  BANANA  ,=>  "yellow",
+);
+is( "@{[ sort keys %got ]}", '1 2 3', ',=>' );
+
 # space fleet
 is( <=><=><=>, 0, '<=><=><=>' );
 
