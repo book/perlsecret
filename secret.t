@@ -117,7 +117,7 @@ is( "@got", 'a a a a', '=()=' );
 is( "@got", '31337 eleet', '=<>=~' );
 
 # kite
-@got = ( ~~<>, ~~<> );
+@got = ( ~~<DATA>, ~~<DATA> );
 is( "@got", 'camel llama', '~~<>' );
 
 # 0rnate double bladed sword
@@ -167,14 +167,17 @@ for my $val ( -1, 0, 1, 1.5, -1.5, -0.5 ) {
    # torx long handle
    ($got = $val ) *=!! $true;
    is( $got, $val, "$val *=!! true" );
-   ($got = $val ) *=!! $false;
-   is( $got, 0, "$val *=!! false" );
-   #is( $got, $val < 0 && $val != -1 ? '-0' : 0, "*=!!" );
+
+SKIP: {
+    skip '*=!! broken with negative != -1 on perl <= 5.013005', 2
+       if $val < 0 && $val != -1 && $] <= 5.013005;
+    ( $got = $val ) *=!! $false;
+    is( $got, 0, "$val *=!! false" );
 
    # torx short handle
    ($got = $val ) *=! $true;
    is( $got, 0, "$val *=! true" );
-   #is( $got, $val < 0 && $val != -1 ? '-0' : 0, "*=!" );
+}
    ($got = $val ) *=! $false;
    is( $got, $val, "$val *=! false" );
 
