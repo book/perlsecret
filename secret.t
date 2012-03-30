@@ -44,7 +44,7 @@ is( !!'a string', $true,  '!!' );
 is( !!undef,      $false, '!!' );
 
 # eskimo greeting
-# TODO
+# TODO }{
 
 # inchworm
 $got = time;
@@ -110,4 +110,9 @@ $n =(@got)= "abababab" =~ /a/g;
 is( $n, 4, '=()=' );
 is( "@got", 'a a a a', '=()=' );
 
+# amphisbaena
+# TODO <~>
+
 done_testing;
+
+__DATA__
