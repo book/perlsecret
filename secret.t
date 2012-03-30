@@ -112,6 +112,10 @@ $n =(@got)= "abababab" =~ /a/g;
 is( $n, 4, '=()=' );
 is( "@got", 'a a a a', '=()=' );
 
+# flaming xwing
+@got =<DATA>=~ /(\d+) is (\w+)/;
+is( "@got", '31337 eleet', '=<>=~' );
+
 # 0rnate double bladed sword
 $got = 1;
 
@@ -204,3 +208,4 @@ is( <=><=><=>, 0, '<=><=><=>' );
 done_testing;
 
 __DATA__
+31337 is eleet
