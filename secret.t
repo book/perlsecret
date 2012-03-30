@@ -16,6 +16,8 @@ my $UV_MAX = 2**( 8 * $Config{uvsize} ) - 1;
 my $UV_MIN = -2**( 8 * $Config{uvsize} );
 my $IV_MAX = 2**( 8 * $Config{ivsize} - 1 ) - 1;
 my $IV_MIN = -2**( 8 * $Config{ivsize} - 1 );
+(my $uvuformat = "%" . $Config{uvuformat}) =~ tr/"//d;
+(my $ivdformat = "%" . $Config{ivdformat}) =~ tr/"//d;
 
 diag "$UV_MAX $UV_MIN $IV_MAX $IV_MIN";
 my ( $got, @got, %got );
@@ -58,19 +60,19 @@ $got = '1.23';                       # string
 is( ~~ $got, 1, '~~ exception' ) if $got != 0;    # used in numeric context
 
 $got = $UV_MAX + 1;
-is( ~~ $got, $UV_MAX, '~~ exception' );
+is( ~~ $got, sprintf($uvuformat, $UV_MAX), '~~ exception' );
 $got = -1;
-is( ~~ $got, $UV_MAX, '~~ exception' );
+is( ~~ $got, sprintf($uvuformat, $UV_MAX), '~~ exception' );
 
 $got = 2**( 8 * $Config{uvsize} - 1 );
 {
     use integer;
-    is( ~~ $got, $IV_MIN, '~~ exception' );
+    is( ~~ $got, sprintf($ivdformat, $IV_MIN), '~~ exception' );
 }
 $got = -2**( 8 * $Config{uvsize} - 1 ) - 1;
 {
     use integer;
-    is( ~~ $got, $IV_MIN, '~~ exception' );
+    is( ~~ $got, sprintf($ivdformat, $IV_MIN), '~~ exception' );
 }
 
 # TODO
