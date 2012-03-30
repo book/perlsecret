@@ -124,6 +124,9 @@ m
 
 ok( $got, '<<=~m>> m ;' );
 
+# space fleet
+is( <=><=><=>, 0, '<=><=><=>' );
+
 # amphisbaena
 # TODO <~>
 
