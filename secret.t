@@ -19,6 +19,8 @@ my $IV_MIN = -2**( 8 * $Config{ivsize} - 1 );
 
 diag "$UV_MAX $UV_MIN $IV_MAX $IV_MIN";
 my ( $got, @got, %got );
+my $true  = 1;
+my $false = '';
 
 # venus
 is( 0+ '23a',       23,   '0+' );
@@ -36,8 +38,10 @@ ok( ( 0+ [] ) =~ /^[1-9][0-9]*$/, '0+' );
 }
 
 # bang bang
-is( !!'a string', 1,  '!!' );
-is( !!undef,      '', '!!' );
+is( !!$true,      $true,  '!!' );
+is( !!$false,     $false, '!!' );
+is( !!'a string', $true,  '!!' );
+is( !!undef,      $false, '!!' );
 
 # eskimo greeting
 # TODO
