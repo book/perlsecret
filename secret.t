@@ -116,6 +116,10 @@ is( "@got", 'a a a a', '=()=' );
 @got =<DATA>=~ /(\d+) is (\w+)/;
 is( "@got", '31337 eleet', '=<>=~' );
 
+# kite
+@got = ( ~~<>, ~~<> );
+is( "@got", 'camel llama', '~~<>' );
+
 # 0rnate double bladed sword
 $got = 1;
 
@@ -209,3 +213,6 @@ done_testing;
 
 __DATA__
 31337 is eleet
+camel
+llama
+dromedary
