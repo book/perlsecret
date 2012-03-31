@@ -118,7 +118,7 @@ is( "@got", '31337 eleet', '=<>=~' );
 
 # kite
 @got = ( ~~<DATA>, ~~<DATA> );
-is( "@got", 'camel llama', '~~<>' );
+is( "@got", "camel\n llama\n", '~~<>' );
 
 # 0rnate double bladed sword
 $got = 1;
