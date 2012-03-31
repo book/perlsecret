@@ -79,7 +79,28 @@ $got = -2**( 8 * $Config{uvsize} - 1 ) - 1;
 # show overloading "" example
 
 # backward inchworm on a stick
+for my $val ( $IV_MAX, $IV_MIN + 1, 0, 1, -1 ) {
+    $got = $val;
+    if( $val <= 0 ) {
+        use integer;
+        is( ~- $got, $val - 1, '~-' );
+    }
+    else {
+        is( ~- $got, $val - 1, '~-' );
+    }
+}
+
 # forward inchworm on a stick
+for my $val ( $IV_MAX -1 , $IV_MIN, 0, 1, -1 ) {
+    $got = $val;
+    if( $val >= 0 ) {
+        use integer;
+        is( -~ $got, $val + 1, '-~' );
+    }
+    else {
+        is( -~ $got, $val + 1, '-~' );
+    }
+}
 
 
     # $y = ~-$x * 4;    # identical to $y = ($x-1)*4;
