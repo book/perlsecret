@@ -227,6 +227,23 @@ sub BANANA () { 3 }
 );
 is( "@{[ sort keys %got ]}", '1 2 3', ',=>' );
 
+# Enterprise
+%got = (
+    apples   => 3,
+    bananas  => 1,
+    cherries => 41,
+    tonic    => 5,
+);
+@got = (
+    'bread',
+    'milk',
+   ('apples'  )x!! ( $got{apples} < 2 ),
+   ('bananas' )x!! ( $got{bananas} < 2 ),
+   ('cherries')x!! ( $got{cherries} < 20 ),
+   ('gin'     )x!! $got{tonic},
+);
+is( "@got", "bread milk bananas gin", '()x!!' );
+
 # space fleet
 is( <=><=><=>, 0, '<=><=><=>' );
 
