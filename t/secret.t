@@ -14,8 +14,8 @@ use warnings;
 use Config;
 
 my ( $UV_MAX, $UV_MIN, $IV_MAX, $IV_MIN );
-$UV_MAX = 2**( 8 * $Config{uvsize} ) - 1;
-$UV_MIN = -2**( 8 * $Config{uvsize} );
+$UV_MAX += 2** $_ for 0 .. 8 * $Config{uvsize} - 1; # avoid overflowing
+$UV_MIN = 0;
 $IV_MAX = 2**( 8 * $Config{ivsize} - 1 ) - 1;
 $IV_MIN = -2**( 8 * $Config{ivsize} - 1 );
 # diag "$UV_MAX $UV_MIN $IV_MAX $IV_MIN";
