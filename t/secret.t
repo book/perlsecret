@@ -10,6 +10,7 @@
 use Test::More;
 
 use strict;
+use warnings;
 use Config;
 
 my $UV_MAX = 2**( 8 * $Config{uvsize} ) - 1;
@@ -25,12 +26,14 @@ my $true  = 1;
 my $false = '';
 
 # venus
+no warnings;
 is( 0+ '23a',       23,   '0+' );
 is( 0+ '3.00',      3,    '0+' );
 is( 0+ '1.2e3',     1200, '0+' );
 is( 0+ '42 EUR',    42,   '0+' );
 is( 0+ 'two cents', 0,    '0+' );
 ok( ( 0+ [] ) =~ /^[1-9][0-9]*$/, '0+' );
+use warnings;
 
 # baby cart
 {
@@ -108,11 +111,13 @@ for my $val ( $IV_MAX -1 , $IV_MIN, 0, 1, -1 ) {
 # Exceptions
 
 # space station
+no warnings;
 is( -+- '23a',       23,   '-+-' );
 is( -+- '3.00',      3,    '-+-' );
 is( -+- '1.2e3',     1200, '-+-' );
 is( -+- '42 EUR',    42,   '-+-' );
 ok( ( -+- [] ) =~ /^[1-9][0-9]*$/, '-+-' );
+use warnings;
 
 is( -+- 'two cents', '+two cents',    '-+- exception' );
 is( -+- '-2B' x 5, '-2B-2B-2B-2B-2B', '-+- exception' );
@@ -251,7 +256,9 @@ is( "@{[ sort keys %got ]}", '1 2 3', ',=>' );
 is( "@got", "bread milk bananas tonic", '()x!!' );
 
 # space fleet
+no warnings;
 is( <=><=><=>, 0, '<=><=><=>' );
+use warnings;
 
 # amphisbaena
 # TODO <~>
