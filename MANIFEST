@@ -1,0 +1,10 @@
+Build.PL
+Changes
+lib/perlsecret.pm
+lib/perlsecret.pod
+Makefile.PL
+MANIFEST			This list of files
+META.json
+META.yml
+t/pod.t
+t/secret.t

@@ -6,7 +6,7 @@ my $builder = Module::Build->new(
     module_name       => 'perlsecret',
     license           => 'perl',
     dist_author       => 'Philippe Bruhat (BooK) <book@cpan.org>',
-    dist_version_from => 'lib/perlsecret.pod',
+    dist_version_from => 'lib/perlsecret.pm',
     build_requires    => { 'Test::More' => '0.94', },
     requires          => { },
     meta_merge => {

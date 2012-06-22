@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME                => 'perlsecret',
     AUTHOR              => 'Philippe Bruhat (BooK) <book@cpan.org>',
-    VERSION_FROM        => 'lib/perlsecret.pod',
+    VERSION_FROM        => 'lib/perlsecret.pm',
     ABSTRACT            => 'Perl secret operators and constant',
     PL_FILES            => {},
     BUILD_REQUIRES => {
