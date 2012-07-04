@@ -1,5 +1,9 @@
 Revision history for perlsecret
 
-1.000 Thu June 21 2012
+1.001 Wed Jul  4 2012
+        - Added an empty .pm file, to register the namespace
+        - marked some tests that fail under use64bitint as TODO
+
+1.000 Thu Jun 21 2012
         - First CPAN release
 
