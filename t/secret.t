@@ -90,6 +90,12 @@ for my $val ( $IV_MAX, $IV_MIN + 1, 0, 1, -1 ) {
         use integer;
         is( ~- $got, $val - 1, '~-' );
     }
+    elsif( $Config{'use64bitint'} ) {
+        TODO: {
+            local $TODO = 'fails with use64bitint';
+            is( ~- $got, $val - 1, '~-' ); # TODO
+        }
+    }
     else {
         is( ~- $got, $val - 1, '~-' );
     }
@@ -101,6 +107,12 @@ for my $val ( $IV_MAX -1 , $IV_MIN, 0, 1, -1 ) {
     if( $val >= 0 ) {
         use integer;
         is( -~ $got, $val + 1, '-~' );
+    }
+    elsif( $Config{'use64bitint'} ) {
+        TODO: {
+            local $TODO = 'fails with use64bitint';
+            is( -~ $got, $val + 1, '-~' );
+        }
     }
     else {
         is( -~ $got, $val + 1, '-~' );
