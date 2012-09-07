@@ -165,6 +165,8 @@ is( "@got", '31337 eleet', '=<>=~' );
 # kite
 @got = ( ~~<DATA>, ~~<DATA> );
 is( "@got", "camel\n llama\n", '~~<>' );
+@got = ( ~~<DATA> );     # return '' instead of undef at EOF
+is( "@got", '', '~~<>' );
 
 # 0rnate double bladed sword
 $got = 1;
@@ -283,4 +285,3 @@ __DATA__
 31337 is eleet
 camel
 llama
-dromedary
