@@ -26,6 +26,7 @@ $IV_MIN = -2**( 8 * $Config{ivsize} - 1 );
 my ( $got, @got, %got );
 my $true  = 1;
 my $false = '';
+my $zero  = 0;
 
 # venus
 no warnings;
@@ -47,8 +48,16 @@ use warnings;
 # bang bang
 is( !!$true,      $true,  '!!' );
 is( !!$false,     $false, '!!' );
+is( !!$zero,      $false, '!!' );
 is( !!'a string', $true,  '!!' );
 is( !!undef,      $false, '!!' );
+
+# key to the truth
+is( 0+!!$true,      $true, '0+!!' );
+is( 0+!!$false,     $zero, '0+!!' );
+is( 0+!!$zero,      $zero, '0+!!' );
+is( 0+!!'a string', $true, '0+!!' );
+is( 0+!!undef,      $zero, '0+!!' );
 
 # eskimo greeting
 # TODO }{
