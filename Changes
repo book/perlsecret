@@ -3,7 +3,7 @@ Revision history for perlsecret
 1.004 Fri Sep 27 2013
         - key to the truth operator 0+!!
         - added an example to the baby cart
-        - name authors for the regular diamond and spaceshop opartor
+        - name authors for the regular diamond and spaceship operator
 
 1.003 Mon Sep 10 2012
         - added notes on <~> and ~~<>
