@@ -161,6 +161,12 @@ $n =(@got)= "abababab" =~ /a/g;
 is( $n, 4, '=()=' );
 is( "@got", 'a a a a', '=()=' );
 
+# right-handed goatse
+{
+    my @a = ( [], [1], [ 1, 2 ], [], [ 5 .. 9 ], [] );
+    is_deeply( [ grep +()= @$_, @a ], [ [1], [ 1, 2 ], [ 5 .. 9 ] ], '()=' );
+}
+
 # goatse + split
 $n =()= @{[ split /:/, "a:a:a:a" ]};
 is( $n, 4, "=()= split" );
