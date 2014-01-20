@@ -183,7 +183,7 @@ is( "@got", "camel\n llama\n", '~~<>' );
 @got = ( ~~<DATA> );     # return '' instead of undef at EOF
 is( "@got", '', '~~<>' );
 
-# 0rnate double bladed sword
+# ornate double-bladed sword
 $got = 1;
 
 <<m=~m>>
