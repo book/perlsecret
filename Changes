@@ -1,5 +1,8 @@
 Revision history for perlsecret
 
+1.005 Tue Jan 21 2014
+        - added notes on ()=
+
 1.004 Fri Sep 27 2013
         - key to the truth operator 0+!!
         - added an example to the baby cart
