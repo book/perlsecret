@@ -59,6 +59,9 @@ is( 0+!!$zero,      $zero, '0+!!' );
 is( 0+!!'a string', $true, '0+!!' );
 is( 0+!!undef,      $zero, '0+!!' );
 
+# Abbott and Costello
+is_deeply( [ $true ||(), $false ||(), $zero ||() ], [$true], '||()' );
+
 # eskimo greeting
 # TODO }{
 
