@@ -1,5 +1,8 @@
 Revision history for perlsecret
 
+1.006
+        - Abbot and Costello operator ||()
+
 1.005 Tue Jan 21 2014
         - added notes on ()=
 
