@@ -27,6 +27,7 @@ my ( $got, @got, %got );
 my $true  = 1;
 my $false = '';
 my $zero  = 0;
+my $undef = undef;
 
 # venus
 no warnings;
@@ -60,7 +61,14 @@ is( 0+!!'a string', $true, '0+!!' );
 is( 0+!!undef,      $zero, '0+!!' );
 
 # Abbott and Costello
-is_deeply( [ $true ||(), $false ||(), $zero ||() ], [$true], '||()' );
+is_deeply( [ $true ||(), $false ||(), $undef ||(), $zero ||() ],
+    [$true], '||()' );
+
+# leaning Abbott and Costello
+if( $] >= 5.010 ) {
+    is_deeply( [ $true //(), $false //(), $undef //(), $zero //() ],
+        [ $true, $false, $zero ], '//()' );
+}
 
 # eskimo greeting
 # TODO }{
