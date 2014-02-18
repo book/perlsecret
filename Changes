@@ -1,5 +1,8 @@
 Revision history for perlsecret
 
+1.008 Tue Feb 18 2014
+        - Leaning Abbot and Costello operator //()
+
 1.007 Mon Feb 10 2014
         - fixes to the Changes file
 
