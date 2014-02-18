@@ -51,14 +51,14 @@ is( !!$true,      $true,  '!!' );
 is( !!$false,     $false, '!!' );
 is( !!$zero,      $false, '!!' );
 is( !!'a string', $true,  '!!' );
-is( !!undef,      $false, '!!' );
+is( !!$undef,     $false, '!!' );
 
 # key to the truth
 is( 0+!!$true,      $true, '0+!!' );
 is( 0+!!$false,     $zero, '0+!!' );
 is( 0+!!$zero,      $zero, '0+!!' );
 is( 0+!!'a string', $true, '0+!!' );
-is( 0+!!undef,      $zero, '0+!!' );
+is( 0+!!$undef,     $zero, '0+!!' );
 
 # Abbott and Costello
 is_deeply( [ $true ||(), $false ||(), $undef ||(), $zero ||() ],
