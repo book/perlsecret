@@ -1,5 +1,8 @@
 Revision history for perlsecret
 
+1.010 Thu Jul  3 2014
+        - add qw,,,,,;
+
 1.009 Fri Jun 13 2014
         - added notes on ()x!! and ||()
 

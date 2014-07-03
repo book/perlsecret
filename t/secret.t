@@ -305,6 +305,14 @@ use warnings;
 # amphisbaena
 # TODO <~>
 
+# qwaterpillar
+my @odd = qw,,,,,;
+my @even = qw,,,,,,;
+my @with_fc_s_sp = qw,,=>,<=>,   , <=> ,, =>,;
+is_deeply(\@odd, [], 'qw,,,,,;');
+is_deeply(\@even, [], 'qw,,,,,,;');
+is_deeply(\@with_fc_s_sp, [], 'qw,,=>,<=>,   , <=> ,, =>,;');
+
 done_testing;
 
 __DATA__
