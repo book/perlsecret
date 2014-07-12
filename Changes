@@ -2,6 +2,12 @@ Revision history for perlsecret
 
 {{$NEXT}}
 
+1.010 Sat Jul 12 2014
+        - clarified the rules for inclusion in the list
+        - reordered references in chronological order
+        - added notes on naming //() and 0+
+        - distribution now packaged using dzil
+
 1.009 Fri Jun 13 2014
         - added notes on ()x!! and ||()
 
