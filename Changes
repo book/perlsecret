@@ -2,6 +2,10 @@ Revision history for perlsecret
 
 {{$NEXT}}
 
+1.011 Sat Aug 16 2014
+    - skipped some tests for *=!! and *=! that failed with Perl <= 5.7.0
+    - added an alternate nickname for }{
+
 1.010 Sat Jul 12 2014
     - clarified the rules for inclusion in the list
     - reordered references in chronological order
