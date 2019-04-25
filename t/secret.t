@@ -89,7 +89,7 @@ if( $] >= 5.010 ) {
 
 # inchworm
 $got = time;
-is( scalar localtime $got, ~~ localtime $got, '~~' );
+is( ~~ localtime $got, scalar localtime $got, '~~' );
 @got = localtime;
 is( ~~ @got, 9, '~~' );
 
