@@ -13,9 +13,11 @@ use strict;
 use warnings;
 use Config;
 
-plan skip_all =>
-  "'bitwise feature was introduced in Perl 5.022, this is only $]"
-  if $] < 5.022;
+BEGIN {
+    plan skip_all =>
+      "'bitwise feature was introduced in Perl 5.022, this is only $]"
+      if $] < 5.022;
+}
 
 my ( $UV_MAX, $UV_MIN, $IV_MAX, $IV_MIN );
 $UV_MAX += 2** $_ for 0 .. 8 * $Config{uvsize} - 1; # avoid overflowing
