@@ -2,6 +2,10 @@ Revision history for perlsecret
 
 {{$NEXT}}
 
+1.015 Sun Apr 28 2019
+    - fixed a loading order issue in t/bitwise.t that caused the test
+      suite to fail on Perls < 5.018
+
 1.014 Thu Apr 25 2019
     - Maori farewell -M5;
     - documented that several secret operators are incompatible with
