@@ -29,7 +29,7 @@ my $false = '';
 my $zero  = 0;
 my $undef = undef;
 
-# venus
+# Venus
 no warnings;
 is( 0+ '23a',       23,   '0+' );
 is( 0+ '3.00',      3,    '0+' );
