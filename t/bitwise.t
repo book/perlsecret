@@ -125,6 +125,7 @@ for my $val ( $IV_MAX -1 , $IV_MIN, 0, 1, -1 ) {
     no warnings 'numeric';
     @got = ( ~~<DATA>, ~~<DATA> );
     is( "@got", "31337 0", '~~<>' );
+    no warnings 'uninitialized';
     @got = ( ~~<DATA> );    # return '' instead of undef at EOF
     is( "@got", '0', '~~<>' );
 }
@@ -134,4 +135,3 @@ done_testing;
 __DATA__
 31337 is eleet
 camel
-llama

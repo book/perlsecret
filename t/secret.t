@@ -205,8 +205,12 @@ is( "@got", '31337 eleet', '=<>=~' );
 # kite
 @got = ( ~~<DATA>, ~~<DATA> );
 is( "@got", "camel\n llama\n", '~~<>' );
-@got = ( ~~<DATA> );     # return '' instead of undef at EOF
-is( "@got", '', '~~<>' );
+
+{
+    no warnings 'uninitialized';
+    @got = ( ~~ <DATA> );    # return '' instead of undef at EOF
+    is( "@got", '', '~~<>' );
+}
 
 # ornate double-bladed sword
 $got = 1;
