@@ -2,6 +2,9 @@ Revision history for perlsecret
 
 {{$NEXT}}
 
+1.016 Tue May 28 2019
+    - Minor documentation and test fixes
+
 1.015 Sun Apr 28 2019
     - fixed a loading order issue in t/bitwise.t that caused the test
       suite to fail on Perls < 5.018
