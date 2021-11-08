@@ -2,6 +2,11 @@ Revision history for perlsecret
 
 {{$NEXT}}
 
+1.017 2021-11-08 BOOK
+    - Minor documentation fixes
+    - Detailed the possible side effects of the "ornate double-bladed sword"
+    - Documented that Jesse Vincent named the "winking fat comma"
+
 1.016 2019-05-28 BOOK
     - Minor documentation and test fixes
 
