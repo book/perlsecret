@@ -170,6 +170,13 @@ use warnings;
 is( -+- 'two cents', '+two cents',    '-+- exception' );
 is( -+- '-2B' x 5, '-2B-2B-2B-2B-2B', '-+- exception' );
 
+# space-invader
+my $n5 = -2;
+$n5 -=- 0;
+is( $n5, -2, '-=-' );
+$n5 -=- 3;
+is( $n5, 1, '-=-' );
+
 # goatse
 my $n;
 $_ = "word2 and word3";
