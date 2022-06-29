@@ -27,7 +27,7 @@ Revision history for perlsecret
     - Serpent of truth ~~!!
     - referenced lists of nicknames to for all the ASCII punctuation marks
 
-1.011 2014-08-16
+1.011 2014-08-16 BOOK
     - skipped some tests for *=!! and *=! that failed with Perl <= 5.7.0
     - added an alternate nickname for }{
 
