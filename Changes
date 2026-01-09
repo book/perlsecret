@@ -2,6 +2,11 @@ Revision history for perlsecret
 
 {{$NEXT}}
 
+1.018 2026-01-09 BOOK
+    - Added several references
+    - Improved date and attribution on many other references
+    - Minor documentation fixes
+
 1.017 2021-11-08 BOOK
     - Minor documentation fixes
     - Detailed the possible side effects of the "ornate double-bladed sword"
