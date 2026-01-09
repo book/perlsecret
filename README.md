@@ -1,14 +1,10 @@
-NAME
-
-perlsecret - Perl secret operators and constants
-
-DESCRIPTION
+# Perl Secret Operators and Constants
 
 Perl has a long tradition of giving nicknames to some of its operators
 (possibly a form of Huffmanisation). These nicknames are based on the
 appearance of the operator, rather than its function.
-The well-known examples are the "diamond operator" <> and the "spaceship
-operator" <=> .
+The well-known examples are the "diamond operator" (`<>`) and the "spaceship
+operator" (`<=>`).
 
 The Perl "secret operators" have been discovered (or created) by Perl
 obfuscators and golfers, usually when looking for a shorter way to
@@ -32,15 +28,17 @@ comp.lang.perl.misc post in January 2003.
 
 This manual page describes and explains the main Perl secret operators.
 
-AUTHOR
+# Author
 
-Philippe Bruhat (BooK)
+This documentation is the work of Philippe Bruhat (BooK),
+supported by many other enthusiasts. See the ACKNOWLEDGMENTS
+section for a (hopefully) complete list.
 
-COPYRIGHT
+# Copyright
 
-Copyright 2010-2019 Philippe Bruhat (BooK).
+Copyright 2010-2026 Philippe Bruhat (BooK).
 
-LICENSE
+# License
 
 This documentation is free; you can redistribute it and/or modify it
 under the same terms as Perl itself.
