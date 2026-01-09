@@ -12,7 +12,7 @@ perform a given operation.
 
 Secret operators are not actually secret, and they are not actually
 operators either. The perl parser does not specifically recognise them,
-and no one is trying to hide them from you. But they are like operators
+and no one is trying to hide them from you. They are like operators
 in the sense that these Perl programmers see them often enough to
 recognize them without thinking about their smaller parts, and eventually
 add them to their toolbox. And they are like secrets in the sense that
